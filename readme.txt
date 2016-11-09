@@ -1,0 +1,1 @@
+This is a personal project working on a web based application for creating complicated timetables
