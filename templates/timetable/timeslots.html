@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+{% load timetable_extras %}
+
+    <h1>Timetable Times</h1>
+
+    <table>
+        <thead><tr>
+            <th>Start Time</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+        </tr></thead>
+        <tbody>
+            {% for time in start_times %}
+            <tr>
+                <td>{{ time }}</td>
+                {% for day in days %}
+                    <td>{% get_timeslot %}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>
